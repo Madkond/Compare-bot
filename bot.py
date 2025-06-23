@@ -7,9 +7,14 @@ from aiogram.fsm.storage.memory import MemoryStorage
 from aiogram.fsm.state import State, StatesGroup
 from aiogram.fsm.context import FSMContext
 
-API_TOKEN = '7999955718:AAFeqUDh6G3I63KHGcTN0mdEpvFR9hCsY5I'
 CSV_PATH = 'df.csv'
 OUTPUT_CSV = 'results.csv'
+
+from dotenv import load_dotenv
+import os
+
+load_dotenv()  
+API_TOKEN = os.getenv("API_TOKEN") 
 
 # Словарь для перевода названий столбцов
 COLUMN_NAMES_RU = {
